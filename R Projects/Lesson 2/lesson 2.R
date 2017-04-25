@@ -5,7 +5,8 @@ library(raster)
 library(spatstat)
 library(rgeos)
 ## You can choose your own country here
-bel <- raster::getData('alt', country='BEL', mask=TRUE) ## SRTM 90m height data
+bel <- raster::getData('alt', country='BEL', mask=T) ## SRTM 90m height data
+## Using mask = T gives the raster the shape of the country, the "mask"
 belshp <- raster::getData('GADM', country='BEL', level=2) ## administrative boundaries
 ## Create random points
 dran <- runifpoint(500, win = as.vector(extent(bel)))
@@ -26,7 +27,8 @@ head(out)
 ####
 plot(out, type = "p", pch = 19)
 
-download.file(url = 'https://raw.githubusercontent.com/loicdtx/bfastSpatial/master/data/tura.rda', destfile = 'tura.rda', method = 'auto')
+download.file(url = 'https://raw.githubusercontent.com/loicdtx/bfastSpatial/master/data/tura.rda', 
+              destfile = 'tura.rda', method = 'auto')
 
 load('tura.rda')
 
