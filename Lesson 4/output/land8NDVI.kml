@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<GroundOverlay>
+<name>layer</name>
+<Icon><href>land8NDVI.png</href><viewBoundScale>0.75</viewBoundScale></Icon>
+	<LatLonBox>
+		<north>52.0594228509187</north><south>51.8606318509187</south><east>5.85350341519661</east><west>5.50775541519661</west>
+	</LatLonBox>
+</GroundOverlay></kml>

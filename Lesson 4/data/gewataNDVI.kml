@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<GroundOverlay>
+<name>layer</name>
+<Icon><href>gewataNDVI.png</href><viewBoundScale>0.75</viewBoundScale></Icon>
+	<LatLonBox>
+		<north>7.61925342145572</north><south>7.45448542145572</south><east>36.1642938911735</east><west>35.9831418911735</west>
+	</LatLonBox>
+</GroundOverlay></kml>
