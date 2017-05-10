@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>route.kml</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff2bff52</color>
+			<width>1.7</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff2bff52</color>
+			<width>1.7</width>
+		</LineStyle>
+	</Style>
+	<Placemark>
+		<name>route</name>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				5.664301285571646,51.96705738501048,0 5.66398930507633,51.96879442394966,0 5.669037848168468,51.96912939514021,0 5.670870078502022,51.97213920564492,0 5.668653495351695,51.97331468900978,0 5.668729979419513,51.97406764427424,0 5.666968940015691,51.97642155705719,0 5.669340025209597,51.97783326390518,0 5.668424440562259,51.98046814327309,0 5.665216103915165,51.98075000286526,0 5.661391835329819,51.9853647417599,0 5.666821343731037,51.98700784896262,0 5.666132404081548,51.98766866445935,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+</Document>
+</kml>
