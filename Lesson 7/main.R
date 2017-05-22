@@ -58,3 +58,8 @@ unique(km$cluster)  ## only 1 seems unique
 # 
 # ## If rNA is a 1, assign an NA at that position
 # valuetable$class[rNA==1] <- NA
+
+km
+plot(km$cluster)
+
+# model <- lm()
