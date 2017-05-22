@@ -206,3 +206,129 @@ legend("bottomright",
        fill=cols, bg="white")
 
 
+
+## UNSUPERVISED CLASSIFICATION - USING K-MEANS
+valuetable <- getValues(covs)
+head(valuetable)
+
+## Construct a k-means object, setting clusters number to 3 (crop, wet, forest)
+## Also omit NA values that don't contain useful information
+km <- kmeans(na.omit(valuetable), centers = 3, iter.max = 100, nstart = 10)
+
+# km contains the clusters (classes) assigned to the cells
+head(km$cluster)
+
+## Create a blank raster with default values of 0
+rNA <- setValues(raster(covs), 0)
+
+## Loop through layers of covs
+## Assign a 1 to rNA wherever an NA is enountered in covs
+for(i in 1:nlayers(covs)){
+  rNA[is.na(covs[[i]])] <- 1
+}
+
+## Convert rNA to an integer vector
+rNA <- getValues(rNA)
+unique(km$cluster) # displays unique values
+
+## Convert valuetable to a data.frame
+valuetable <- as.data.frame(valuetable)
+
+## If rNA is a 0, assign the cluster value at that position
+valuetable$class[rNA==0] <- km$cluster
+
+## If rNA is a 1, assign an NA at that position
+valuetable$class[rNA==1] <- NA
+
+## Create a blank raster
+classes <- raster(covs)
+
+## Assign values from the 'class' column of valuetable
+classes <- setValues(classes, valuetable$class)
+plot(classes, legend=FALSE, col=c("dark green", "orange", "light blue"))
+
+
+## APPLYING A RASTER SIEVE BY CLUMPING
+
+## Make an NA-value raster based on the LC raster attributes
+formask <- setValues(raster(predLC), NA)
+
+## Assign 1 to formask to all cells corresponding to the forest class
+formask[predLC==2] <- 1
+
+plot(formask, col="dark green", legend = FALSE)
+
+## Group raster cells into clumps based on the Queen's Case
+if(!file.exists(fn <- "data/clumformask.grd")) {
+  forestclumps <- clump(formask, directions=8, filename=fn)
+} else {
+  forestclumps <- raster(fn)
+}
+plot(forestclumps)
+
+## Assign freqency table to a matrix
+clumpFreq <- freq(forestclumps)
+head(clumpFreq)
+tail(clumpFreq)
+
+## Coerce freq table to data.frame
+clumpFreq <- as.data.frame(clumpFreq)
+
+## which rows of the data.frame are only represented by one cell?
+str(which(clumpFreq$count==1))
+
+## which values do these correspond to?
+str(clumpFreq$value[which(clumpFreq$count==1)])
+
+## Put these into a vector of clump ID's to be removed
+excludeID <- clumpFreq$value[which(clumpFreq$count==1)]
+
+## Make a new forest mask to be sieved
+formaskSieve <- formask
+
+## Assign NA to all clumps whose IDs are found in excludeID
+formaskSieve[forestclumps %in% excludeID] <- NA
+
+## Zoom in to a small extent to check the results
+# Note: you can define your own zoom by using e <- drawExtent()
+e <- extent(c(811744.8, 812764.3, 849997.8, 850920.3))
+opar <- par(mfrow=c(1, 2)) # allow 2 plots side-by-side
+plot(formask, ext=e, col="dark green", legend=FALSE)
+plot(formaskSieve, ext=e, col="dark green", legend=FALSE)
+
+par(opar)  ## reset plotting window
+
+
+## WORKING WITH THEMATIC RASTERS
+load("data/lulcGewata.rda")
+
+## Check out the distribution of the values
+freq(lulcGewata)
+hist(lulcGewata)
+
+## Load the data.frame file containing defining classes
+load("data/LUTGewata.rda")
+LUTGewata
+
+lulc <- as.factor(lulcGewata)
+
+# assign a raster attribute table (RAT)
+levels(lulc) <- LUTGewata
+lulc
+
+## Layerize allows to visualize one raster class at a time
+classes <- layerize(lulc)
+# Layer names follow the order of classes in the LUT
+names(classes) <- LUTGewata$Class
+plot(classes, legend=FALSE)
+
+## Construct a forest only layer to single it out
+forest <- raster(classes, 5)
+# is equivalent to:
+forest <- classes[[5]]
+# or (since the layers are named):
+forest <- classes$forest
+
+## Replace 0's (non-forest) with NA's
+forest[forest==0] <- NA
+plot(forest, col="dark green", legend=FALSE)
