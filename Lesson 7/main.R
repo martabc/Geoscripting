@@ -39,13 +39,14 @@ head(km$cluster)
 unique(km$cluster)  ## only 1 seems unique
 
 # ## Create a blank raster with default values of 0
-# rNA <- setValues(raster(covs), 0)
+# rNA <- setValues(raster(df), 0)
 # 
 # ## Loop through layers of covs
 # ## Assign a 1 to rNA wherever an NA is enountered in covs
-# for(i in 1:nlayers(covs)){
-#   rNA[is.na(covs[[i]])] <- 1
+# for(i in 1:nlayers(df)){
+#   rNA[is.na(df[[i]])] <- 1
 # }
+
 # ## Convert rNA to an integer vector
 # rNA <- getValues(rNA)
 # 
@@ -62,4 +63,6 @@ unique(km$cluster)  ## only 1 seems unique
 km
 plot(km$cluster)
 
-# model <- lm()
+library(randomForest)
+
+model <- model <- randomForest(lm ~ 'band1' + 'band2' + 'band3' + 'band4' + 'band5' + 'band7' + 'VCF', data = km$cluster)
