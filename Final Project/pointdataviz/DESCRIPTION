@@ -1,11 +1,17 @@
-Package: heatmapViz
+Package: pointdataviz
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Marta Blanco Castano
+Maintainer: The package maintainer <marta.blanco-castano@du.edu>
+Description: This package includes three basic functions, which 
+     allow for the visualization of point data from a CSV file
+	 (comma delimitted). The first displays all input points
+	 over a basemap. The second groups the points into clusters,
+	 which, as one zooms in, are better visualized. The last
+	 creates a heatmap, to show the overall trend in the 
+	 geographic coverage of those input points.
+License: n/a
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1.9000

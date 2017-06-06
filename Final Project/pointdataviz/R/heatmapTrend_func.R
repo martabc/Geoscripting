@@ -8,7 +8,7 @@
 #' @keywords heatmap, data visualization
 #' @export
 #' @examples
-#' heatmap()
+#' heatmapTrend()
 
 # Package source URL: http://cran.r-project.org/web/packages/ggmap/ggmap.pdf
 # Data source URL: http://www.geo.ut.ee/aasa/LOOM02331/heatmap_in_R.html
@@ -17,7 +17,7 @@ library(ggmap)
 library(dplyr)
 
 
-heatmap <- function(dataset, location)
+heatmapTrend <- function(dataset, location)
 {
   # load the data
   ct <- read.csv(dataset, sep = ",")
@@ -33,4 +33,4 @@ heatmap <- function(dataset, location)
 }
 
 
-heatmap(dataset = "Final Project/heatmapViz/data/food.csv", location = 'Denver')
+# heatmapTrend(dataset = "Final Project/heatmapViz/data/food.csv", location = 'Denver')

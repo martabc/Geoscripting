@@ -15,7 +15,7 @@
 #' @keywords point clustering, data visualization
 #' @export
 #' @examples
-#' clusters()
+#' showClusters()
 
 
 library(rMaps)
@@ -25,7 +25,7 @@ library(magrittr)
 library(sp)
 
 
-clusters <- function(dataset, field)
+showClusters <- function(dataset, field)
 {
   ct <- read.csv(dataset, sep = ",")
 
@@ -41,4 +41,4 @@ clusters <- function(dataset, field)
 }
 
 
-clusters(dataset = "Final Project/heatmapViz/data/food.csv", field = )  ## not working with field parameter yet...
+# showClusters(dataset = "Final Project/heatmapViz/data/food.csv", field = )  ## not working with field parameter yet...

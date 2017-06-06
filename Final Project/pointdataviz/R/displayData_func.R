@@ -13,7 +13,7 @@
 #' @keywords point data visualization
 #' @export
 #' @examples
-#' display()
+#' displayData()
 #'
 #' ## FYI: if an error message comes up saying there is no current rMaps version,
 ## one may still install the library via the commands:
@@ -29,7 +29,7 @@ library(leaflet.extras)
 library(sp)
 
 
-display <- function(dataset, field){
+displayData <- function(dataset, field){
 
   # ct <- "Final Project/heatmapViz/data/heliports.csv"
 
@@ -50,5 +50,5 @@ display <- function(dataset, field){
 }
 
 
-display(dataset = "Final Project/heatmapViz/data/food.csv", field = )   ## not working with field parameter yet...
+# displayData(dataset = "Final Project/heatmapViz/data/food.csv", field = )   ## not working with field parameter yet...
 
