@@ -1,15 +1,9 @@
 ## Author: Marta Blanco Castano
 #' First function - Basic Point Data Visualization
 #'
-#' This function allows you to visualize an input point data file (as a CSV)
-#' on top of a basemap. You may additionally select a field to use
-#' for popups on the points, so the map becomes interactive. NOTE: the fields
-#' for latitude and longitude (to plot the points) must be labeled as "lat" and
-#' "lon" in your input CSV file (without the quotation marks)
+#' This function allows you to visualize an input point data file (as a CSV) on top of a basemap. You may additionally select a field to use for popups on the points, so the map becomes interactive. NOTE: the fields for latitude and longitude (to plot the points) must be labeled as "lat" and "lon" in your input CSV file (without the quotation marks)
 #' @param dataset Path to CSV file used as input
-#' @param field Optional field that will enable informational popups upon hover
-#' (note that if no field is desired as input, an empty set of quotations must
-#' be specified (e.g., " "))
+#' @param field Optional field that will enable informational popups upon hover (note that if no field is desired as input, an empty set of quotations must be specified (e.g., " "))
 #' @keywords point data visualization
 #' @export
 #' @examples

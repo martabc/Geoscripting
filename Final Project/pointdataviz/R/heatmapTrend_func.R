@@ -1,8 +1,7 @@
 ## Author: Marta Blanco Castano
 #' Third function - Heatmap for Basic Trend Visualization (coverage extent)
 #'
-#' This function allows you to visualize an input point data file (as a CSV)
-#' on top of a basemap, in the form of a basic heatmap
+#' This function allows you to visualize an input point data file (as a CSV) on top of a basemap, in the form of a basic heatmap
 #' @param dataset Path to CSV file used as input
 #' @param location Location, in quotations, of the geographical area in question
 #' @keywords heatmap, data visualization
