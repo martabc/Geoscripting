@@ -1,0 +1,30 @@
+lon,lat,POOL_NAME,LOC_CODE,POOL_TYPE,ADDRESS_ID,ADDRESS_LI,ADDRESS__1,CITY,STATE,ZIP,PHONE,PARK_LOCAT,HOURS,PHOTO
+-105.0277203,39.72261346,Barnum Pool,PB1,Outdoor,0,370 Hooker St,,Denver,CO,,303-937-4611,Barnum Recreation Center,documents/rec_centers/barnumr.pdf,images/Pools/No_Image.gif
+-104.9562546,39.73017573,Congress Pool,PC1,Outdoor,0,914 Elizabeth St,,Denver,CO,,303-321-1161,Congress Park,documents/rec_centers/congress.pdf,images/Pools/No_Image.gif
+-104.9087432,39.68663925,Cook Pool,PC3,Outdoor,0,1655 S Oneida,,Denver,CO,,303-692-5614,Cook Park,documents/rec_centers/cook.pdf,images/Pools/cookpark_pool.jpg
+-105.0354853,39.69530538,Garfield Pool,PG3,Outdoor,0,1295 S Lowell Blvd,,Denver,CO,,303-937-4612,Garfield Lake Park,documents/rec_centers/garfield.pdf,images/Pools/No_Image.gif
+-104.9816966,39.67435419,Harvard Gulch Pool,PH1,Outdoor,0,550 E Iliff Ave,,Denver,CO,,303-698-4953,Harvard Gulch Park,documents/rec_centers/harvard.pdf,images/Pools/No_Image.gif
+-105.0414303,39.67813227,Harvey Park Pool,PH2,Outdoor,0,2150 S Tennyson Wy,,Denver,CO,,303-937-4613,Harvey Park,documents/rec_centers/harvey.pdf,images/Pools/No_Image.gif
+-105.0047371,39.73415947,La Alma Pool,PL1,Outdoor,0,1120 Osage St,,Denver,CO,,303-572-4622,La Alma / Lincoln Park,documents/rec_centers/laalma.pdf,images/Pools/No_Image.gif
+-104.9751322,39.76159552,Mestizo-Curtis Pool,PC5,Outdoor,0,3181 Champa St,,Denver,CO,,303-292-2363,Mestizo-Curtis Park,documents/rec_centers/mestizo.pdf,images/Pools/No_Image.gif
+-105.0996388,39.62896863,Southwest Pool,PS5,Outdoor,0,9200 W Saratoga Pl,,Denver,CO,,303-932-0031,Southwest Recreation Center,documents/rec_centers/southwest.pdf,images/Pools/No_Image.gif
+-105.0517968,39.78147654,Berkeley Pool,PB2,Outdoor,0,5105 W 46th Ave,,Denver,CO,,303-455-3856,Berkeley Lake Park,documents/rec_centers/berkeley.pdf,images/Pools/No_Image.gif
+-105.0054701,39.68671271,Ruby Hill Pool,PR2,Outdoor,0,1555 W Mexico Ave,,Denver,CO,,303-742-1003,Ruby Hill Park,documents/rec_centers/rubyhill.pdf,images/Pools/No_Image.gif
+-105.0045452,39.77724641,Aztlan Pool,PA3,Outdoor,0,4435 Navajo St,,Denver,CO,,303-455-4637,Aztlan Recreation Center,documents/rec_centers/aztlan.pdf,images/Pools/aztlan_pool.jpg
+-104.9375724,39.65934215,Eisenhower Pool,PE1,Outdoor,0,4300 E Dartmouth Ave,,Denver,CO,,303-692-5615,Eisenhower Park,documents/rec_centers/eisenhower.pdf,images/Pools/No_Image.gif
+-104.9818272,39.78235708,Globeville Pool,PG2,Outdoor,0,4700 Logan St,,Denver,CO,,303-292-2358,Argo Park,documents/rec_centers/globeviller.pdf,images/Pools/No_Image.gif
+-104.7502434,39.77872125,Green Valley Ranch Pool,PG4,Outdoor,0,4455 Jebel St,,Denver,CO,,303-373-8713,Green Valley Ranch East Park,documents/rec_centers/gvr.pdf,images/Pools/No_Image.gif
+-104.9556631,39.78486569,Swansea Pool,PS4,Outdoor,0,2650 E 49th Ave,,Denver,CO,,303-295-9462,Swansea Park,documents/rec_centers/swansea.pdf,images/Pools/No_Image.gif
+-105.017692,39.75976624,Ashland Indoor Pool,PA1,Indoor,0,2501 W Dunkfield Pl,,Denver,CO,,720-865-0510,Ashland Recreation Center,documents/rec_centers/Ashland_Calendar.pdf,images/Pools/ashland_indoorpool.jpg
+-105.019686,39.68550919,Athmar Recreation Center,PA2,Indoor,0,2680 W Mexico Av,,Denver,CO,,303-937-4600,Athmar Recreation Center,documents/rec_centers/Athmar_Calendar.pdf,images/Pools/No_Image.gif
+-104.9752182,39.75505737,Glenarm Recreation Center,PG1,Indoor,0,2800 Glenarm Pl,,Denver,CO,,720-865-3380,Glenarm Recreation Center,documents/rec_centers/Glenarm_Calendar.pdf,images/Pools/glenarm_indoorpool.jpg
+-104.9943642,39.71570948,La Familia Recreation Center,PL2,Indoor,0,65 S Elati St,,Denver,CO,,303-698-4995,La Familia Recreation Center,documents/rec_centers/LaFamilia_Calendar.pdf,images/Pools/No_Image.gif
+-104.9092804,39.77071853,Martin Luther King Jr Recreation Center,PK1,Indoor,0,3880 Newport St,,Denver,CO,,720-865-0530,Martin Luther King Jr Park,documents/rec_centers/MLK_Calendar.pdf,images/Pools/mlk_indoorpool.jpg
+-104.8055979,39.79273788,Montbello Recreation Center,PM2,Indoor,0,15555 E 53rd Ave,,Denver,CO,,720-865-0580,Parkfield,documents/rec_centers/Montbello_Calendar.pdf,images/Pools/montbello_indoorpool.jpg
+-105.0227372,39.73646976,Rude Recreation Center,PR1,Indoor,0,2855 W Holden Pl,,Denver,CO,,720-865-0570,Rude Park,documents/rec_centers/Rude_Calendar.pdf,images/Pools/rude_indoorpool.jpg
+-105.0512374,39.78138589,Scheitler Recreation Center,PB3,Indoor,0,5031 W 46th Av,,Denver,CO,,720-865-0640,Berkeley Lake Park,documents/rec_centers/Scheitler_Calendar.pdf,images/Pools/No_Image.gif
+-104.989985,39.75137226,Twentieth Street Recreation Center,PT1,Indoor,0,1011 20th St,,Denver,CO,,720-865-520,Twentieth Street Recreation Center,documents/rec_centers/TwentiethSt_Calendar.pdf,images/Pools/20th_indoorpool.jpg
+-104.9705279,39.70263408,Washington Park Recreation Center,PW1,Indoor,0,701 S Franklin St,,Denver,CO,,720-865-3400,Washington Park,documents/rec_centers/Washington_Calendar.pdf,images/Pools/washpark_indoorpool.jpg
+-104.9218141,39.7642927,Hiawatha Davis Jr Recreation Center,PS1,Indoor,0,3334 Holly St,,Denver,CO,,720-865-0590,Skyland Park,documents/rec_centers/HiawathaDavis_Calendar.pdf,images/Pools/No_Image.gif
+-104.8946934,39.72737958,Montclair Recreation Center,PM4,Indoor,0,729 Ulster Way,,Denver,CO,,720-865-0560,Monclair Recreation Center,documents/rec_centers/Montclair_Calendar.pdf,images/Pools/montclair_indoorpool.jpg
+-104.8749238,39.76098665,Central Park Recreation Center,PC4,Indoor,0,9651 E Martin Luther King Blvd,,Denver,CO,,720-865-0750,Central Park Recreation Center,documents/rec_centers/CentralPark_Calendar.pdf,images/Pools/No_Image.gif
