@@ -10,23 +10,21 @@
 #' @export
 displayData <- function(dataset, field)
 {
-  # ct <- "Final Project/heatmapViz/data/heliports.csv"
-  
+  # ct <- read.csv('data/food.csv', sep = ",")
+
   ct <- read.csv(dataset, sep = ",")
-  
+
   map <- leaflet(ct) %>% addTiles('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', attribution = 'OpenStreetMap')
-  
+
   meanX <- mean(ct$lat)
   meanY <- mean(ct$lon)
-  
+
   map %>% setView(meanX, meanY, zoom = 10)
-  
-  # test <- noquote(field)
-  
+
   map %>% addCircles(~lon, ~lat, popup=ct$type,  label = ~as.character(STORE_NAME), weight = 5, radius=80,
                      color="#EF06A8", fillColor = 'black', stroke = TRUE, fillOpacity = 1,
                      opacity = 0.5) %>% addLegend("bottomright", colors= "#EF06A8", labels="Points")
 }
 
 
-# displayData(dataset = "Final Project/heatmapViz/data/food.csv", field = )   ## not working with field parameter yet...
+# displayData(dataset = "data/food.csv", field = )   ## not working with field parameter yet...
