@@ -10,12 +10,20 @@
 #' @export
 heatmapTrend <- function(dataset, location)
 {
+  library(leaflet)
+  library(leaflet.extras)
+  library(rMaps)
+  library(sp)
+  library(magrittr)
+  library(ggmap)
+  library(dplyr)
+
   # load the data (read from csv)
   ct <- read.csv(dataset, sep = ",")
-  
+
   # Package source URL: http://cran.r-project.org/web/packages/ggmap/ggmap.pdf
   # Data source URL: http://www.geo.ut.ee/aasa/LOOM02331/heatmap_in_R.html
-  
+
   # Download the basemap
   map <- get_map(location = location, zoom = 11)
   # Draw the heat map
@@ -27,4 +35,4 @@ heatmapTrend <- function(dataset, location)
 }
 
 
-# heatmapTrend(dataset = "Final Project/heatmapViz/data/food.csv", location = 'Denver')
+# heatmapTrend(dataset = "data/food.csv", location = 'Denver')

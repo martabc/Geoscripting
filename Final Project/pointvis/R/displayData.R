@@ -10,6 +10,14 @@
 #' @export
 displayData <- function(dataset, field)
 {
+  library(leaflet)
+  library(leaflet.extras)
+  library(rMaps)
+  library(sp)
+  library(magrittr)
+  library(ggmap)
+  library(dplyr)
+
   # ct <- read.csv('data/food.csv', sep = ",")
 
   ct <- read.csv(dataset, sep = ",")

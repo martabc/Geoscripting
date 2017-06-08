@@ -10,18 +10,27 @@
 #' @export
 showClusters <- function(dataset, field)
 {
+
+  library(leaflet)
+  library(leaflet.extras)
+  library(rMaps)
+  library(sp)
+  library(magrittr)
+  library(ggmap)
+  library(dplyr)
+
   ct <- read.csv(dataset, sep = ",")
-  
+
   map <- leaflet(ct) %>% addTiles('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', attribution = 'OpenStreetMap')
-  
+
   meanX <- mean(ct$lat)
   meanY <- mean(ct$lon)
-  
+
   map %>% setView(meanX, meanY, zoom = 10)
-  
+
   leaflet(ct) %>% addTiles('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', attribution = 'OpenStreetMap') %>%
     addMarkers(clusterOptions = markerClusterOptions(), label = ~as.character(STORE_NAME))
 }
 
 
-# showClusters(dataset = "../data/food.csv", field = )  ## not working with field parameter yet...
+# showClusters(dataset = "data/food.csv", field = )  ## not working with field parameter yet...
