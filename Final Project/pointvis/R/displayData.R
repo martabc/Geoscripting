@@ -10,6 +10,7 @@
 #' @export
 displayData <- function(dataset, field)
 {
+  ## Load necessary libraries (just in case!)
   library(leaflet)
   library(leaflet.extras)
   library(rMaps)
@@ -18,21 +19,25 @@ displayData <- function(dataset, field)
   library(ggmap)
   library(dplyr)
 
-  # ct <- read.csv('data/food.csv', sep = ",")
-
+  ## Load file from function call (path, separated by a comma because it should be a CSV file)
   ct <- read.csv(dataset, sep = ",")
 
+  ## Add leaflet tiles (basemap)
   map <- leaflet(ct) %>% addTiles('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', attribution = 'OpenStreetMap')
 
+  ## Calculate mean for x and y, so we know where to center the map in the next step
   meanX <- mean(ct$lat)
   meanY <- mean(ct$lon)
 
+  ## Center map and set zoom based on lat/long center means (from previous step)
   map %>% setView(meanX, meanY, zoom = 10)
 
+  ## Load point data from file based on lat/long columns, set specific labels for popups, and customize colors, opacity, etc.
+  ## Add a legend as well at the bottom-right
   map %>% addCircles(~lon, ~lat, popup=ct$type,  label = ~as.character(STORE_NAME), weight = 5, radius=80,
                      color="#EF06A8", fillColor = 'black', stroke = TRUE, fillOpacity = 1,
                      opacity = 0.5) %>% addLegend("bottomright", colors= "#EF06A8", labels="Points")
 }
 
 
-# displayData(dataset = "data/food.csv", field = )   ## not working with field parameter yet...
+# displayData(dataset = "data/food.csv", field = )   ## not working with field parameter yet...But will be fixed in the future! :)

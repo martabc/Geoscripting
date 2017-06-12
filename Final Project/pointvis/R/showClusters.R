@@ -10,7 +10,7 @@
 #' @export
 showClusters <- function(dataset, field)
 {
-
+  ## Load necessary libraries (just in case!)
   library(leaflet)
   library(leaflet.extras)
   library(rMaps)
@@ -19,18 +19,23 @@ showClusters <- function(dataset, field)
   library(ggmap)
   library(dplyr)
 
+  ## Load file from function call (path, separated by a comma because it should be a CSV file)
   ct <- read.csv(dataset, sep = ",")
 
+  ## Add leaflet tiles (basemap)
   map <- leaflet(ct) %>% addTiles('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', attribution = 'OpenStreetMap')
 
+  ## Calculate mean for x and y, so we know where to center the map in the next step - attribute to the chosen lat/long columns from CSV file (i.e., 'lat' and 'lon')
   meanX <- mean(ct$lat)
   meanY <- mean(ct$lon)
 
+  ## Center map and set zoom based on lat/long center means (from previous step)
   map %>% setView(meanX, meanY, zoom = 10)
 
+  ## Push point data from file, and set option for point data visualization (i.e., marker clustering). Set label field for popups
   leaflet(ct) %>% addTiles('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', attribution = 'OpenStreetMap') %>%
     addMarkers(clusterOptions = markerClusterOptions(), label = ~as.character(STORE_NAME))
 }
 
 
-# showClusters(dataset = "data/food.csv", field = )  ## not working with field parameter yet...
+# showClusters(dataset = "data/food.csv", field = )  ## not working with field parameter yet...But will be fixed in the future! :)

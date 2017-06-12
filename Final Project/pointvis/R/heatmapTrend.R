@@ -26,7 +26,8 @@ heatmapTrend <- function(dataset, location)
 
   # Download the basemap
   map <- get_map(location = location, zoom = 11)
-  # Draw the heat map
+  
+  # Draw the heat map, with all customizeable parameters (size of heatmap point radius, etc.)
   ggmap(map, extent = "device") + geom_density2d(data = ct, aes(x = lon, y = lat), size = 0.3) +
     stat_density2d(data = ct,
                    aes(x = lon, y = lat, fill = ..level.., alpha = ..level..), size = 0.9,
